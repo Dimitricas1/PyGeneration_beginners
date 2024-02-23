@@ -5,6 +5,7 @@ select = [
     "W",
     # Pyflakes
     "F",
+    "ANN",
     # pyupgrade
     "UP",
     # flake8-bugbear
@@ -15,4 +16,7 @@ select = [
     "I",
     # Pylint
     "PLR"
+]
+ignore = [
+    "PLR2004"
 ]
