@@ -29,5 +29,11 @@ jobs:
               run:
                 echo "COURSE_PROGRESS=$(python get_progress/get_progress.py)" >> $GITHUB_ENV
 
-            - name: test
-              run: echo ${{ env.COURSE_PROGRESS }}
+            - name: create badge
+              uses: schneegans/dynamic-badges-action@v1.7.0
+              with:
+                auth: ${{ secrets.GIST_SECRET }}
+                gistID: 4151a8c7eaaada163c91e999d69b39a0
+                filename: course_progress.json
+                label: Progress
+                message: ${{ env.COURSE_PROGRESS }}
