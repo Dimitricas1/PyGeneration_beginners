@@ -1,9 +1,0 @@
-{
-    "python.languageServer": "Pylance",
-    "python.analysis.typeCheckingMode": "strict",
-    "[python]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "charliermarsh.ruff"
-    },
-    "python.analysis.autoImportCompletions": true
-}
