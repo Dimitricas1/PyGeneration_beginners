@@ -26,4 +26,8 @@ jobs:
               env:
                 STEPIK_CLIENT_ID: ${{ secrets.STEPIK_CLIENT_ID }}
                 STEPIK_CLIENT_SECRET: ${{ secrets.STEPIK_CLIENT_SECRET }}
-              run: python get_progress.py
+              run:
+                echo "COURSE_PROGRESS=$(python get_progress/get_progress.py)" >> $GITHUB_ENV
+
+            - name: test
+              run: echo ${{ env.COURSE_PROGRESS }}
